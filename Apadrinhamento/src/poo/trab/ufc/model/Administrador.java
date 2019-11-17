@@ -12,8 +12,8 @@ public class Administrador extends Usuario{
 		ListaSecretaria = new ArrayList();
 	}
 
-	public Administrador(ArrayList<SecretariaImpl> listaSecretaria) {
-		super();
+	public Administrador(int id, String nome, String sobrenome, String cpf, int idade, ArrayList<SecretariaImpl> listaSecretaria) {
+		super(id, nome, sobrenome, cpf, idade);
 		ListaSecretaria = new ArrayList();
 	}
 
@@ -24,13 +24,5 @@ public class Administrador extends Usuario{
 	public void setListaSecretaria(ArrayList<SecretariaImpl> listaSecretaria) {
 		this.ListaSecretaria = listaSecretaria;
 	}
-	
-	public void addSecretaria(SecretariaImpl s) {
-		this.ListaSecretaria.add(s);
-	}
-	
-	
-	
-	
 
 }

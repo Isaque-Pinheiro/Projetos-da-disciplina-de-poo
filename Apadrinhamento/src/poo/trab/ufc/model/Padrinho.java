@@ -1,32 +1,34 @@
 package poo.trab.ufc.model;
-
 import poo.trab.ufc.impl.*;
 
+import java.util.ArrayList;
 import java.util.ArrayList;
 
 public abstract class Padrinho extends Usuario {
 	
-	private double valorMensalDoado;
-	private CarteiraVirtual carteira;
-	ArrayList<Apadrinhado> ListApadrinhados;
+	protected double historicoDeValorDoado;
+	protected CarteiraVirtual carteira;
+	protected ArrayList<Apadrinhado> ListApadrinhados;
+	protected double valorDoacao;
 
 	public Padrinho() {
 		ListApadrinhados = new ArrayList();
 	}
 	
-	public Padrinho(double valorMensalDoado, CarteiraVirtual carteira) {
-		super();
-		this.valorMensalDoado = valorMensalDoado;
+	public Padrinho(int id, String nome, String sobrenome, String cpf, int idade, double historicoDeValorDoado, CarteiraVirtual carteira, ArrayList<Apadrinhado> ListApadrinhados, double valorDoacao) {
+		super(id, nome, sobrenome, cpf, idade);
+		this.historicoDeValorDoado = historicoDeValorDoado;
 		this.carteira = carteira;
 		ListApadrinhados = new ArrayList();
+		this.valorDoacao = valorDoacao;
 	}
 
-	public double getValorMensalDoado() {
-		return valorMensalDoado;
+	public double getHistoricoDeValorDoado() {
+		return historicoDeValorDoado;
 	}
 
-	public void setValorMensalDoado(double valorMensalDoado) {
-		this.valorMensalDoado = valorMensalDoado;
+	public void setHistoricoDeValorDoado(double historicoDeValorDoado) {
+		this.historicoDeValorDoado = historicoDeValorDoado;
 	}
 
 	public CarteiraVirtual getCarteira() {
@@ -45,16 +47,20 @@ public abstract class Padrinho extends Usuario {
 		this.ListApadrinhados = listApadrinhados;
 	}
 
-	@Override
-	public String toString() {
-		return "Padrinho [valorMensalDoado=" + valorMensalDoado + ", carteira=" + carteira + ", ListApadrinhados="
-				+ ListApadrinhados + "]";
+	public double getValorDoacao() {
+		return valorDoacao;
 	}
 
-	public abstract void doaValor();
-	
-	public boolean realizaCadastro(Padrinho p) {
-		
+	public void setValorDoacao(double valorDoacao) {
+		this.valorDoacao = valorDoacao;
 	}
+
+	@Override
+	public String toString() {
+		return "Padrinho [historicoDeValorDoado=" + historicoDeValorDoado + ", carteira=" + carteira
+				+ ", ListApadrinhados=" + ListApadrinhados + ", valorDoacao=" + valorDoacao + "]";
+	}
+
+	public abstract void realizaDoacao();
 	
 }

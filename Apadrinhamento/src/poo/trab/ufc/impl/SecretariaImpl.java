@@ -15,8 +15,8 @@ public class SecretariaImpl extends Usuario implements Secretaria {
 		ListPadrinhos = new ArrayList();
 	}
 
-	public SecretariaImpl(ArrayList<Apadrinhado> listApadrinhados) {
-		super();
+	public SecretariaImpl(int id, String nome, String sobrenome, String cpf, int idade, ArrayList<Apadrinhado> listApadrinhados) {
+		super(id, nome, sobrenome, cpf, idade);
 		ListApadrinhados = new ArrayList();
 		ListPadrinhos = new ArrayList();
 	}
@@ -36,22 +36,5 @@ public class SecretariaImpl extends Usuario implements Secretaria {
 	public void setListPadrinhos(ArrayList<Padrinho> listPadrinhos) {
 		ListPadrinhos = listPadrinhos;
 	}
-	
-	public void cadastraApadrinhado (Apadrinhado ap) {
-		ListApadrinhados.add(ap);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 
 }
