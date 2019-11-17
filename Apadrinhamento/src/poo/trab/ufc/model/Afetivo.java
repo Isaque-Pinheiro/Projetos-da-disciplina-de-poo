@@ -14,17 +14,5 @@ public Afetivo() {}
 	public void realizaDoacao() {
 		
 	}
-	
-	public void realizaPasseio(Passeio p) {
-		Scanner ler = new Scanner(System.in);
-		
-		 p.setDataDeSaida(ler.nextLine());
-		 p.setDataDeRetorno(ler.nextLine());
-		 p.setHorarioDeSaida(ler.nextLine());
-		 p.setHorarioDeRetorno(ler.nextLine());
-		 p.setHorarioDeRetorno(ler.nextLine());
-		 
-		 ler.close();
-	}
 
 }

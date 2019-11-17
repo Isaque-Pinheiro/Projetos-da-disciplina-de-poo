@@ -1,6 +1,7 @@
 package poo.trab.ufc.model;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Apadrinhado extends Usuario {
 	
@@ -98,6 +99,18 @@ public class Apadrinhado extends Usuario {
 				+ ", dataDeEntradaNaOrganizacao=" + dataDeEntradaNaOrganizacao + ", nomeDoPai=" + nomeDoPai
 				+ ", nomeDaMae=" + nomeDaMae + ", descricao=" + descricao + ", img=" + img
 				+ ", valorRecebidoDasDoacoes=" + valorRecebidoDasDoacoes + "]";
+	}
+	
+	public void realizaPasseio(Passeio p) {
+		Scanner ler = new Scanner(System.in);
+		
+		 p.setDataDeSaida(ler.nextLine());
+		 p.setDataDeRetorno(ler.nextLine());
+		 p.setHorarioDeSaida(ler.nextLine());
+		 p.setHorarioDeRetorno(ler.nextLine());
+		 p.setHorarioDeRetorno(ler.nextLine());
+		 
+		 ler.close();
 	}
 	
 }
